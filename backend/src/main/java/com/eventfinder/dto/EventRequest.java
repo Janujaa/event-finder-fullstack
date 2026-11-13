@@ -1,0 +1,3 @@
+package com.eventfinder.dto;
+import jakarta.validation.constraints.*; import java.time.*;
+public record EventRequest(@NotBlank @Size(max=150) String title,@NotBlank String description,@NotNull Long categoryId,@NotNull LocalDate eventDate,@NotNull LocalTime startTime,@NotNull LocalTime endTime,@NotBlank String venue,@NotBlank String location,String imageUrl,String organiserName,String organiserEmail,@NotNull @Min(1) Integer capacity) {}

@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom';export default function Footer(){return <footer className="footer"><div><Link className="brand" to="/"><span className="brand-mark">✳</span>evently<span className="brand-dot">.</span></Link><p>Make room for experiences worth remembering.</p></div><span>© {new Date().getFullYear()} Evently. Built for discovering more.</span></footer>}

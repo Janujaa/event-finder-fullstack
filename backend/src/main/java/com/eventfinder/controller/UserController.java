@@ -1,0 +1,3 @@
+package com.eventfinder.controller;
+import org.springframework.jdbc.core.JdbcTemplate;import org.springframework.security.core.Authentication;import org.springframework.web.bind.annotation.*;import java.util.*;
+@RestController @RequestMapping("/api/users") public class UserController {private final JdbcTemplate db;public UserController(JdbcTemplate d){db=d;}@GetMapping("/profile") public Map<String,Object> profile(Authentication a){return db.queryForMap("SELECT id,name,email,role,created_at FROM users WHERE email=?",a.getName());}}
